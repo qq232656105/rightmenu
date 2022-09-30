@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="expires" content="">
+<meta http-equiv="Content-Language" content="ja">
+<title>rightmenujs执行一次后其他JS失效</title>
+</head>
+		<link href="MONOTONE/style_sy.css" rel="stylesheet">
+		<script src="MONOTONE/jquery.min.js"></script>
+	    <script type="text/javascript" src="MONOTONE/swiper-3.4.0.jquery.min.js" ></script>
+		<script type="text/javascript" src="MONOTONE/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="MONOTONE/rightMenu.js"></script>
+        <script type="text/javascript" src="MONOTONE/slider.js"></script>
+        <script type="text/javascript" src="MONOTONE/hc-mobile-nav.js"></script>
+<body>
+
+<!--menu-->	
+	<div style="width:15.6vw; height: auto; float: left;"><button class="btn"><span></span></button></div>
+    <div id="menu">
+        <div class="f1">
+            <ul>
+                <li class="hasChild">
+                    <a href="#">ベビーケア</a>
+                    <div class="f2">
+                        <ul>
+                            <li class="hasChild">
+                                <a href="#">├ &nbsp content</a>
+                                <div class="f3">
+                                    <ul>
+                                        <li><a href="#">fdsbwer</a></li>
+                                        <li><a href="#">fdsabdfbew</a></li>
+                                        <li><a href="#">dfcbvewa</a></li>
+                                        <li><a href="#">dfberwg</a></li>
+                                        <li><a href="#">dfbersdg</a></li>
+                                        <li><a href="#">cbvergsz</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="hasChild">
+                    <a href="#">スポーツ用品</a>
+                    <div class="f2">
+                        <ul>
+                            <li class="hasChild">
+                                <a href="#">content</a>
+                                <div class="f3">
+                                    <ul>
+                                        <li><a href="#">baidu</a></li>
+                                        <li><a href="#">baidu</a></li>
+                                        <li><a href="#">baidu</a></li>
+                                        <li><a href="#">baidu</a></li>
+                                        <li><a href="#">baidu</a></li>
+                                        <li><a href="#">baidu</a></li>
+                                        <li><a href="#">baidu</a></li>
+                                        <li><a href="#">baidu</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="hasChild">
+                    <a href="#">アウトドア用品</a>
+                    <div class="f2">
+                        <ul>
+                            <li class="hasChild">
+                                <a href="#">content</a>
+                                <div class="f3">
+                                    <ul>
+                                        <li><a href="#">qq</a></li>
+                                        <li><a href="#">qq</a></li>
+                                        <li><a href="#">qq</a></li>
+                                        <li><a href="#">qq</a></li>
+                                        <li><a href="#">qq</a></li>
+                                        <li><a href="#">qq</a></li>
+                                        <li><a href="#">qq</a></li>
+                                        <li><a href="#">qq</a></li>
+                                        <li><a href="#">qq</a></li>
+                                        <li><a href="#">qq</a></li>
+                                        <li><a href="#">qq</a></li>
+                                        <li><a href="#">qq</a></li>
+                                        <li><a href="#">qq</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">スーツケース</a></li>
+            </ul>
+        </div>
+    </div>	
+<script type="text/javascript">
+    $(function ($) {
+        $('#menu').rightMenu({
+            "triggerBtn":".btn"
+        }).init()
+    })
+</script>
+
+<!--main_focus_new-->
+<div class="main_focus_new">
+    <div id="main_focus_new_nav">
+      <span class="main_focus_new_nav_new"><img src="MONOTONE/新着アイテムページ.png"/></span>
+      <span class="main_focus_new_nav_focus"><img src="MONOTONE/greyショップ内の注目商品.png"/></span>
+    </div>
+    <!---->
+    <div id="main_focus_new_nav_container">
+      <section class="main_focus_new_tab">
+            <div class="main_new">
+              <ul>
+                  <li><a href=""><img src="MONOTONE/new_01.png"></a></li>
+                  <li><a href=""><img src="MONOTONE/new_02.png"></a></li>
+                  <li><a href=""><img src="MONOTONE/new_03.png"></a></li>
+              </ul>
+              <ul style="margin-left: 3.125vw;">
+                  <li><a href=""><img src="MONOTONE/new_04.png"></a></li>
+                  <li><a href=""><img src="MONOTONE/new_05.png"></a></li>
+                  <li><a href=""><img src="MONOTONE/new_06.png"></a></li>
+              </ul>
+          </div>
+      </section>
+      <section class="main_focus_new_tab">
+            <div class="main_focus">
+              <ul>
+                  <li><a href=""><img src="MONOTONE/focus_01.png"></a></li>
+                  <li><a href=""><img src="MONOTONE/focus_02.png"></a></li>
+                  <li><a href=""><img src="MONOTONE/focus_03.png"></a></li>
+              </ul>
+              <ul style="margin-left: 3.125vw;">
+                  <li><a href=""><img src="MONOTONE/focus_04.png"></a></li>
+                  <li><a href=""><img src="MONOTONE/focus_05.png"></a></li>
+                  <li><a href=""><img src="MONOTONE/focus_06.png"></a></li>
+              </ul>
+          </div>
+      </section>
+    </div>
+  </div>
+  <script>
+    window.onload = function () {
+      var nav = document.getElementById('main_focus_new_nav');
+      var oNav = main_focus_new_nav.getElementsByTagName('span');
+      var container = document.getElementById('main_focus_new_nav_container');
+      var oDiv =
+        main_focus_new_nav_container.getElementsByClassName(
+          'main_focus_new_tab'
+        );
+      for (var i = 0; i < oNav.length; i++) {
+        oNav[i].index = i;
+
+        oNav[i].onclick = function () {
+          for (var i = 0; i < oNav.length; i++) {
+            // oNav[i].className = '';
+            oDiv[i].style.display = 'none';
+          }
+          oDiv[this.index].style.display = 'block';
+
+          if (this.className === 'main_focus_new_nav_new') {
+            document
+              .querySelector('.main_focus_new_nav_new>img')
+              .setAttribute('src', 'MONOTONE/新着アイテムページ.png');
+            document
+              .querySelector('.main_focus_new_nav_focus>img')
+              .setAttribute('src', 'MONOTONE/greyショップ内の注目商品.png');
+          } else {
+            document
+              .querySelector('.main_focus_new_nav_new>img')
+              .setAttribute('src', 'MONOTONE/grey新着アイテムページ.png');
+            document
+              .querySelector('.main_focus_new_nav_focus>img')
+              .setAttribute('src', 'MONOTONE/ショップ内の注目商品.png');
+          }
+        };
+        for (var m = 1; m < oNav.length; m++) {
+          // oNav[m].className = '';
+          oDiv[m].style.display = 'none';
+        }
+      }
+    };
+  </script>
+
+</body>
+</html>
